@@ -36,7 +36,7 @@ services:
       retries: 3
 
   ordinals-ord:
-    image: localhost/ordinals-ord-3
+    image: haffjjj/ordinals-ord:v0.18.4
     restart: unless-stopped
     ports:
       - 3032:3032
@@ -63,7 +63,7 @@ services:
       retries: 3
 
   blockstream-electrs:
-    image: localhost/blockstream-electrs-4
+    image: haffjjj/blockstream-electrs:v1.0.0
     restart: unless-stopped
     ports:
       - 3002:3002 # rest api
@@ -94,7 +94,7 @@ services:
       retries: 3
 
   janoside-btc-rpc-explorer:
-    image: localhost/janoside-btc-rpc-explorer-1
+    image: haffjjj/janoside-btc-rpc-explorer:v3.4.0
     restart: unless-stopped
     ports:
       - 3000:3002

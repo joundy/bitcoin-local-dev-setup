@@ -5,8 +5,8 @@ This setup is used for local bitcoin development using the regtest network.
 *NOT recommended to run on mainnet/testnet because some components are fragile, especially for the ord server.
 
 ## How to Run
-- Build ord, electrs, btc-rpc-explorer image `docker/podman build -t <image_name> -f <dockerfile>`
-- Set the built image inside the compose file for services: ordinals-ord, blockstream-electrs, janoside-btc-rpc-explorer.
+- Optional, build ord, electrs, btc-rpc-explorer image `docker/podman build -t <image_name> -f <dockerfile>`
+- Optional, set the built image inside the compose file for services: ordinals-ord, blockstream-electrs, janoside-btc-rpc-explorer.
 - Run the compose file `docker/podman compose up -d`
 
 ## Default
@@ -42,5 +42,4 @@ https://github.com/joundy/janoside-btc-rpc-explorer forked from https://github.c
 A lightweight bitcoin explorer, the dashboard is very straightforward and simple enough to see the details of bitcoin transactions. additionally, it also supports per-user address transactions using the electrum API.
 
 ## TODOs
-- publish built images.
 - make it more configurable.
