@@ -13,6 +13,9 @@ FROM debian:bullseye-slim
 
 WORKDIR /data
 
+RUN apt-get update
+RUN apt-get install -y curl
+
 COPY --from=builder /usr/local/cargo/bin/ord /bin/ord
 
 EXPOSE 3032

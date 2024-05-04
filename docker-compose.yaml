@@ -36,7 +36,7 @@ services:
       retries: 3
 
   ordinals-ord:
-    image: localhost/ordinals-ord-2
+    image: localhost/ordinals-ord-3
     restart: unless-stopped
     ports:
       - 3032:3032
@@ -55,6 +55,12 @@ services:
       --index-runes
       server
       --http-port=3032
+    healthcheck:
+      test: curl -f localhost:3032/blockheight || exit 1
+      start_period: 5s
+      interval: 5s
+      timeout: 5s
+      retries: 3
 
   blockstream-electrs:
     image: localhost/blockstream-electrs-4
@@ -82,6 +88,7 @@ services:
       --electrum-rpc-addr=0.0.0.0:60401
     healthcheck:
       test: curl -f localhost:3002/mempool || exit 1
+      start_period: 5s
       interval: 5s
       timeout: 5s
       retries: 3
