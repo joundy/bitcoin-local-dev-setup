@@ -1,7 +1,7 @@
 
 ## Setup
   
-This setup is used for local bitcoin development using the regtest network.
+This setup is used for local bitcoin development using the regtest network.\
 *NOT recommended to run on mainnet/testnet because some components are fragile, especially for the ord server.
 
 ## How to Run
@@ -18,27 +18,28 @@ This setup is used for local bitcoin development using the regtest network.
 | electrs-electrum | 60401 |
 | electrs-rest | 3002 |
 | btc-rpc-explorer | 3000 |
+
 ### Auth
-bitcoin user: `user`
-bitcoin password: `password`
+bitcoin user: `user` \
+bitcoin password: `password` \
 you can change it on `.env` file.
 
 ## Components
 ### bitcoin core
-https://github.com/ruimarinho/docker-bitcoin-core
+https://github.com/ruimarinho/docker-bitcoin-core \
 Bitcoin core.
 ### ord
-https://github.com/joundy/ordinals-ord, forked from https://github.com/ordinals/ord
-Ord server for indexing inscriptions and runes.
+https://github.com/joundy/ordinals-ord, forked from https://github.com/ordinals/ord \
+Ord server for indexing inscriptions and runes.\
 API list: https://github.com/joundy/ordinals-ord/blob/master/src/subcommand/server.rs#L181
 ### electrs
-https://github.com/joundy/blockstream-electrs forked from https://github.com/Blockstream/electrs
-*Blockstream version of https://github.com/romanz/electrs 
-This is a electrum server, on blockstream version they added some rest pi and also did optimizations for public usage.
-Rest API docs: https://github.com/blockstream/esplora/blob/master/API.md
+https://github.com/joundy/blockstream-electrs forked from https://github.com/Blockstream/electrs \
+*Blockstream version of https://github.com/romanz/electrs \
+This is an electrum server, on blockstream version they added some rest api and also did optimizations for public usage.\
+Rest API docs: https://github.com/blockstream/esplora/blob/master/API.md \
 Electrum docs: https://electrum.readthedocs.io/en/latest/jsonrpc.html
 ### btc-rpc-explorer
-https://github.com/joundy/janoside-btc-rpc-explorer forked from https://github.com/janoside/btc-rpc-explorer
+https://github.com/joundy/janoside-btc-rpc-explorer forked from https://github.com/janoside/btc-rpc-explorer \
 A lightweight bitcoin explorer, the dashboard is very straightforward and simple enough to see the details of bitcoin transactions. additionally, it also supports per-user address transactions using the electrum API.
 
 ## TODOs
