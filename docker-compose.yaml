@@ -86,12 +86,6 @@ services:
       --electrum-txs-limit=100000
       --http-addr=0.0.0.0:3002
       --electrum-rpc-addr=0.0.0.0:60401
-    healthcheck:
-      test: curl -f localhost:3002/mempool || exit 1
-      start_period: 5s
-      interval: 5s
-      timeout: 5s
-      retries: 3
 
   janoside-btc-rpc-explorer:
     image: haffjjj/janoside-btc-rpc-explorer:v3.4.0
@@ -100,8 +94,6 @@ services:
       - 3000:3002
     depends_on:
       bitcoin:
-        condition: service_healthy
-      blockstream-electrs:
         condition: service_healthy
     networks:
       - internal
